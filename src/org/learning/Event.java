@@ -93,7 +93,7 @@ public class Event {
       bookedSeats += numSeats;
   }
 
-  public void cancelBookings(int numSeats){
+  public void cancelBookings(int numSeats) throws RuntimeException{
     // verifico se ho abbastanza prenotazioni da disdire
     if(bookedSeats < numSeats){
       throw new RuntimeException("Not enough bookings");
